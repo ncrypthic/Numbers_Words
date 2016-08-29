@@ -1,6 +1,6 @@
 <phpunit
     colors="true"
-    bootstrap="bootstrap.php"
+    bootstrap="../vendor/autoload.php"
     verbose="true"
     strict="true"
 >

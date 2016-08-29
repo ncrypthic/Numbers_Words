@@ -1,11 +1,11 @@
 {
-    "name": "pear/numbers_words",
+    "name": "ncrypthic/numbers_words",
     "description": "Allows converting numbers written in arabic digits to words in several languages. You can convert an integer between -infinity and infinity.",
     "type": "library",
     "keywords": [
         "numbers"
     ],
-    "homepage": "https://github.com/pear/Numbers_Words",
+    "homepage": "https://github.com/ncrypthic/Numbers_Words",
     "license": "PHP-3.01",
     "authors": [
         {
@@ -31,15 +31,18 @@
         {
             "name": "Piotr Klaban",
             "email": "makler@man.torun.pl"
+        },
+        {
+            "name": "Lim Afriyadi",
+            "email": "lim.afriyadi.id@gmail.com"
         }
     ],
     "require": {
-        "php": ">=5.3.2",
-        "pear/math_biginteger": ">=1.0.2"
+        "php": ">=5.4.20"
     },
     "autoload": {
         "psr-0": {
-            "Numbers": "./"
+            "": "src/"
         }
     },
     "include-path": [
