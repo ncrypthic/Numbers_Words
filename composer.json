@@ -1,6 +1,6 @@
 {
-    "name": "ncrypthic/numbers_words",
-    "description": "Allows converting numbers written in arabic digits to words in several languages. You can convert an integer between -infinity and infinity.",
+    "name": "lla/numbers_words",
+    "description": "PEAR::Numbers_Words to PSR-0 compliance. See https://github.com/pear/Numbers_Words",
     "type": "library",
     "keywords": [
         "numbers"
@@ -44,13 +44,6 @@
         "psr-0": {
             "": "src/"
         }
-    },
-    "include-path": [
-        "./"
-    ],
-    "support": {
-        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Numbers_Words",
-        "source": "https://github.com/pear/Numbers_Words"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
