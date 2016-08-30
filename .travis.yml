@@ -1,6 +1,6 @@
 language: php
 install:
-  - pear install package.xml
+  - composer require lla/numbers_words
 php:
-  - 5.3
-script: phpunit tests/
+  - 5.4.20
+script: phpunit tests/ --bootstrap vendor/autoload.php
