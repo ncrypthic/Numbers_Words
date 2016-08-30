@@ -1,5 +1,10 @@
 2015-09-01
   * Refactor to PSR-0 compliance
+  * Create LocaleInterface for Locale classes
+  * Rename all methods with prefix '_' to camelCase with private method
+  * Replace all `var` keyword with property access type
+  (private|public|protected)
+  * Rename```Words:_toWords()``` to ``Words::fromNumber()```
 
 2014-11-03
   * Fixed bug #20435: Missing files in PEAR archive [kouber]
