@@ -5,6 +5,7 @@
   * Replace all `var` keyword with property access type
   (private|public|protected)
   * Rename```Words:_toWords()``` to ``Words::fromNumber()```
+  * Update tests class with new namespace
 
 2014-11-03
   * Fixed bug #20435: Missing files in PEAR archive [kouber]
