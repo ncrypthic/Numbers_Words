@@ -31,7 +31,7 @@ composer install ncrypthic/numbers
 In your php script you need to ```use Numbers\Words```header file:
 
 ```php
-use Numbers\Words;
+use \LLA\Numbers\Words;
 ```
 
 Then you can call ```Numbers_Words::fromWords()``` function with two
@@ -39,17 +39,17 @@ arguments: integer number (can be a string with digits) and
 optional locale name (default is *en_US*):
 
 ```php
-$ret = Words::fromWords($num,"en_GB");
-if (PEAR::isError($ret)) {
-    echo "Error: " . $ret->message . "\n";
-  } else {
-    echo "Num $num in British English is '<b>$ret</b>'<p>\n";
-}
+use \LLA\Numbers\Words;
+
+$num   = 12340000000;
+$words = Words::fromWords($num,"en_GB");
+echo "Num $num in British English is '<b>$words</b>'<p>\n";
 ```
 
 For  this would display:
-
+```
 Num 12340000000 in British English is '<b>twelve thousand million three hundred forty million</b>'<p>
+```
 
 There are avaibale the following modules (called by locale name,
 in alphabetical order):
@@ -143,7 +143,7 @@ should be supported by Numbers_Words ... Does each language
 spell numbers with a 'coma'/'koma'? What do you think?
 
 ```php
-use \Numbers\Words;
+use \LLA\Numbers\Words;
 
 function num2word($num, $fract = 0) {
 
@@ -166,8 +166,8 @@ Rob King send me a patch that would allow to leave fraction part in digits.
 I.e. you can convert 31.01 into 'thirty-one pounds 01 pence':
 
 ```php
-use \Numbers\Words;
-use \Numbers\Words\Locale\en\GB;
+use \LLA\Numbers\Words;
+use \LLA\Numbers\Words\Locale\en\GB;
 
 $obj = new GB();
 $convert_fraction = false;
@@ -177,7 +177,7 @@ print $obj->toCurrencyWords('GBP', '31', '01', $convert_fraction) . "\n";
 
 ** How to write new Language Files:
 
-Just copy existing en_US or en_GB etc. file into lang.{your_country/locale code}.php
+Just copy existing en_US or en_GB etc. file into src/LLA/Numbers/Words/Locale/{your_country/locale code}.php
 and translate digits, numbers, tousands to your language. Then please send it
 to the author to the address makler@man.torun.pl.
 
